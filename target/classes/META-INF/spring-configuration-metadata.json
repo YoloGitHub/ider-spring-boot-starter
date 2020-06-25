@@ -1,0 +1,29 @@
+{
+  "groups": [
+    {
+      "name": "step-id-factory",
+      "type": "com.tolo.idFactory.impl.step.StepIdFactory",
+      "sourceType": "com.tolo.idFactory.configuration.IderConfig",
+      "sourceMethod": "stepIdFactory(org.springframework.context.ApplicationContext)"
+    }
+  ],
+  "properties": [
+    {
+      "name": "step-id-factory.input",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "com.tolo.idFactory.impl.step.StepIdFactory"
+    },
+    {
+      "name": "step-id-factory.separator",
+      "type": "java.lang.String",
+      "sourceType": "com.tolo.idFactory.impl.step.StepIdFactory",
+      "defaultValue": ","
+    },
+    {
+      "name": "step-id-factory.table-cache",
+      "type": "java.util.Map<java.lang.String,com.tolo.core.aware.GenerateFactory>",
+      "sourceType": "com.tolo.idFactory.impl.step.StepIdFactory"
+    }
+  ],
+  "hints": []
+}
