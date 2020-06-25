@@ -2,6 +2,9 @@
 ## 1.1 配置及调用
     1. 在properties文件中配置datasource.
     2. 在properties文件中配置流水号list：step-id-factory.input.
+        例如：
+            step-id-factory.input.t1=t1,10000000000,4,测试类型t1
+            step-id-factory.input.t2=t2,10000000000,8,测试类型t2
     3. 程序中调用：注入StepIdFactory，
         @Autowird
         private StepIdFactory stepIdFactory;
