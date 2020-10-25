@@ -6,8 +6,7 @@ package com.tolo.core.aware;
  */
 public interface GenerateFactory extends Factory {
 
-    Object generate();
+    Long generateLong();
 
     String generateString();
-
 }

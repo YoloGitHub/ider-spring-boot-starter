@@ -69,14 +69,20 @@ public class DbIdImpl extends AbstractDbTableImpl {
     }
 
     @Override
-    public synchronized String generateString() {
+    public synchronized Long generateLong() {
 
         if(cacheNum > step){
             cacheNum = 1;
             cacheStart = (Long)((Object[])generate())[0];
         }
 
-        return ((Long)(start + cacheStart + cacheNum ++)).toString();
+        return start + cacheStart + cacheNum ++;
+    }
+
+    @Override
+    public synchronized String generateString() {
+
+        return generateLong().toString();
     }
 
     @SneakyThrows

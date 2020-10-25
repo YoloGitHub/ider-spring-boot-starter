@@ -20,7 +20,7 @@ public class DbGenerateFactory implements GenerateFactory {
     private Object[] values;
 
     @SneakyThrows
-    @Override
+//    @Override
     public Object generate() {
 
         Connection connection = dbTableAware.getConnection();
@@ -36,6 +36,11 @@ public class DbGenerateFactory implements GenerateFactory {
         connection.commit();
         connection.setAutoCommit(oldCommit);
 
+        return null;
+    }
+
+    @Override
+    public Long generateLong() {
         return null;
     }
 

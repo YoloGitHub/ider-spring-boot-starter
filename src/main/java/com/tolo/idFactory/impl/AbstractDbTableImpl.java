@@ -16,8 +16,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @Data
 public abstract class AbstractDbTableImpl extends ConnectionImpl implements DbTableAware, GenerateFactory {
 
-//    private Object index;
-
     private static AtomicBoolean initOnceBl = new AtomicBoolean(false);
 
     public void init(){
@@ -33,8 +31,7 @@ public abstract class AbstractDbTableImpl extends ConnectionImpl implements DbTa
     public abstract void initOnce();
 
     @SneakyThrows
-    @Override
-    public synchronized Object generate() {
+    protected Object generate() {
 
         Connection connection = getConnection();
         boolean oldCommit = connection.getAutoCommit();
