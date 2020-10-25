@@ -30,6 +30,7 @@
         
     4. 参考test工程:
         
+        https://github.com/YoloGitHub/tolo-test-ider.git
         
 ### 默认依赖
         
